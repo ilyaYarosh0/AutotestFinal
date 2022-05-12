@@ -72,7 +72,8 @@ git push origin master --force'''
             "Wrong text"
 class CalcPage(BasePage):
     def open_calc(self):
-        find = self.browser.find_element(*CalcLocators.FIND).click()
+        find = self.browser.find_element(*CalcLocators.FIND)
+        find.click()
         search = self.browser.find_element(*CalcLocators.SEARCH)
         search.send_keys("google server calculator")
         search.send_keys(Keys.ENTER)
@@ -81,15 +82,18 @@ class CalcPage(BasePage):
         open_link.click()
 
     def choose_right_value(self):
-        time.sleep(10)
-        #compute_engine = (self.browser.find_element(*CalcLocators.COMPUTE_ENGINE))
-        #compute_engine.click()
-                                                                                    #choose another iframe to thet calc
-        
+        time.sleep(2)
+        iframe = self.browser.find_element(*CalcLocators.IFRAME)
+        self.browser.switch_to.frame(iframe)
+        # time.sleep(2000)
+
+        iframe1 = self.browser.find_element(*CalcLocators.IFRAME1)
+        self.browser.switch_to.frame(iframe1)
         number_instance = self.browser.find_element(*CalcLocators.NUMBER_OF_INSTANCE)
         number_instance.send_keys("4")
+        time.sleep(3)
+        #select_value = self.browser.find_element(*CalcLocators.SELECT_VALUE)
+       # select_value.click()
+       # select_free = self.browser.find_element(*CalcLocators.FREE)
+        #select_free.click()
 
-        select_value = self.browser.find_element(*CalcLocators.SELECT_VALUE)
-        select_value.click()
-        select_free = self.browser.find_element(*CalcLocators.FREE)
-        select_free.click()

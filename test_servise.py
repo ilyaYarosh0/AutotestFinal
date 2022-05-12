@@ -1,4 +1,4 @@
-from pages.servise_page import ServisePage
+from pages.servise_page import ServisePage, CalcPage
 import time
 
 def test_servis1(browser):
@@ -28,3 +28,11 @@ def test_servis1(browser):
     servise_page.should_be_right_syntax()
     servise_page.should_be_right_text()
     time.sleep(5)
+
+def test_calc(browser):
+    link = "https://cloud.google.com/"
+    calc = CalcPage(browser,link)
+    calc.open()
+    calc.open_calc()
+    calc.choose_right_value()
+

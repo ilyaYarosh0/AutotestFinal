@@ -11,3 +11,18 @@ class ServicePageLocators():
     BASH = (By.XPATH, '//ol[@class ="bash"]')
     TITLE =(By.XPATH, '//h1') #/html/head/title
     SHOOLD_BE_BASH = (By.CLASS_NAME, "bash")
+
+class CalcLocators():
+    FIND=(By.XPATH, '//div[@class ="devsite-search-container"]')
+    SEARCH=(By.XPATH, '//div[@class ="devsite-searchbox"]/input')
+    OPEN_LINK=(By.XPATH, '//div[@class="gs-title"]/a[@data-ctorig="https://cloud.google.com/products/calculator"]')
+    IFRAME=(By.XPATH, '//devsite-iframe/iframe')
+    IFRAME1 = (By.ID, 'myFrame')
+    NUMBER_OF_INSTANCE=(By.XPATH, '//input[@ng-model="listingCtrl.computeServer.quantity"]')
+    SELECT_VALUE=(By.XPATH, '')
+    FREE=(By.XPATH, '')
+
+
+
+
+
