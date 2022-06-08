@@ -96,4 +96,5 @@ class CalcPage(BasePage):
        # select_value.click()
        # select_free = self.browser.find_element(*CalcLocators.FREE)
         #select_free.click()
+        #check how to work mac + git
 
