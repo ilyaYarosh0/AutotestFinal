@@ -19,8 +19,13 @@ class CalcLocators():
     IFRAME=(By.XPATH, '//devsite-iframe/iframe')
     IFRAME1 = (By.ID, 'myFrame')
     NUMBER_OF_INSTANCE=(By.XPATH, '//input[@ng-model="listingCtrl.computeServer.quantity"]')
-    SELECT_VALUE=(By.XPATH, '')
-    FREE=(By.XPATH, '')
+    SERIES=(By.XPATH, '//md-select[@name="series"]')
+    N1=(By.XPATH, '//md-option[@value="n1"]')
+    MACHINETYPE=(By.XPATH, '//md-select[@placeholder="Instance type"]')
+    CHOOSEMACHINETYPE=(By.XPATH, '//md-option[@value="CP-COMPUTEENGINE-VMIMAGE-N1-STANDARD-8"]')
+    ADDGPU=(By.XPATH, '')
+    GPUTYPE=(By.XPATH, '')
+    NUMBEROFGOU=(By.XPATH, '')
 
 
 
