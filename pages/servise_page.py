@@ -97,9 +97,24 @@ class CalcPage(BasePage):
         N1.click()
         MachineType=self.browser.find_element(*CalcLocators.MACHINETYPE)
         MachineType.click()
-        time.sleep(2)
+        time.sleep(3)
         ChooseType=self.browser.find_element(*CalcLocators.CHOOSEMACHINETYPE)
         ChooseType.click()
+
+        addGpu = self.browser.find_element(*CalcLocators.ADDGPU)
+        addGpu.click()
+
+        typeGpu= self.browser.find_element(*CalcLocators.SELECTGPUTYPE)
+        typeGpu.click()
+        time.sleep(2)
+        type= self.browser.find_element(*CalcLocators.GPUTYPE)
+        type.click()
+
+        numberGpu= self.browser.find_element(*CalcLocators.SELECTNUMBEROFGPU)
+        numberGpu.click()
+        time.sleep(2)
+        selectNumber= self.browser.find_element(*CalcLocators.NUMBEROFGPU)
+        selectNumber.click()
 
         time.sleep(10)
 

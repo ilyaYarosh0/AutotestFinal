@@ -23,9 +23,20 @@ class CalcLocators():
     N1=(By.XPATH, '//md-option[@value="n1"]')
     MACHINETYPE=(By.XPATH, '//md-select[@placeholder="Instance type"]')
     CHOOSEMACHINETYPE=(By.XPATH, '//md-option[@value="CP-COMPUTEENGINE-VMIMAGE-N1-STANDARD-8"]')
-    ADDGPU=(By.XPATH, '')
-    GPUTYPE=(By.XPATH, '')
-    NUMBEROFGOU=(By.XPATH, '')
+    ADDGPU=(By.XPATH, '//md-checkbox[@ng-model="listingCtrl.computeServer.addGPUs"]')
+    SELECTGPUTYPE=(By.XPATH, '//md-select[@placeholder="GPU type"]')
+    GPUTYPE=(By.XPATH, '//div[contains(text(), "NVIDIA Tesla V100")]')
+    SELECTNUMBEROFGPU=(By.XPATH, '//md-select[@placeholder="Number of GPUs"]')
+    NUMBEROFGPU = (By.XPATH, '//md-option[@ng-disabled="item.value != 0 && item.value < listingCtrl.minGPU"][@value="1"]')
+    CHOOSESSD = (By.XPATH, '//md-select[@ng-model="listingCtrl.computeServer.ssd"]')
+    SSD = (By.XPATH, '//div[contains(text(), "2x375 GB")]')
+    CHOOSELOCATION = (By.XPATH, '//md-select[@ng-model="listingCtrl.computeServer.location"]')
+    LOCATION = (By.XPATH, '')
+    CHOOSECOMMITEDUSAGE = (By.XPATH, '')
+    COMMITEDUSAGE=(By.XPATH, '')
+    ADDTOESTIMATE=(By.XPATH, '')
+
+
 
 
 
