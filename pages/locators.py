@@ -31,10 +31,11 @@ class CalcLocators():
     CHOOSESSD = (By.XPATH, '//md-select[@ng-model="listingCtrl.computeServer.ssd"]')
     SSD = (By.XPATH, '//div[contains(text(), "2x375 GB")]')
     CHOOSELOCATION = (By.XPATH, '//md-select[@ng-model="listingCtrl.computeServer.location"]')
-    LOCATION = (By.XPATH, '')
-    CHOOSECOMMITEDUSAGE = (By.XPATH, '')
-    COMMITEDUSAGE=(By.XPATH, '')
-    ADDTOESTIMATE=(By.XPATH, '')
+    LOCATION = (By.XPATH, '//md-option[@ng-repeat="item in listingCtrl.fullRegionList | filter:listingCtrl.inputRegionText.computeServer"][@value="europe-west3"]')
+    CHOOSECOMMITEDUSAGE = (By.XPATH, '//md-select[@ng-disabled="listingCtrl.isCudDisabled"]')
+    COMMITEDUSAGE=(By.XPATH, '//md-option[@id="select_option_123"]')
+    ADDTOESTIMATE=(By.XPATH, '//button[@ng-click="listingCtrl.addComputeServer(ComputeEngineForm);"]')
+
 
 
 
